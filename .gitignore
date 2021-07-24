@@ -1,0 +1,4 @@
+/node_modules
+.prettierignore
+package-lock.json
+/coverage
