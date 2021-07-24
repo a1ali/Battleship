@@ -3,6 +3,7 @@ import { Ship } from "./ship";
 const Gameboard = () => {
     let ships = [];
     let missedAttackArr = [];
+    let placesHit = [];
 
     const placeShip = (shipPosArr) => {
         let newShip = Ship(shipPosArr);
@@ -10,13 +11,17 @@ const Gameboard = () => {
     };
 
     const receiveAttack = (position) => {
-        if (!missedAttackArr.includes(position)) {
+        if (
+            !missedAttackArr.includes(position) &&
+            !placesHit.includes(position)
+        ) {
             let hit = false;
             //check each ship if the attack hit
             for (let i = 0; i < ships.length; i++) {
                 if (ships[i].isHit(position)) {
                     //change grid color;
                     hit = true;
+                    placesHit.push(position);
                     break;
                 }
             }
@@ -24,6 +29,9 @@ const Gameboard = () => {
                 missedAttackArr.push(position);
                 //mark div as miss
             }
+            return true;
+        } else {
+            return false;
         }
     };
 
@@ -36,7 +44,7 @@ const Gameboard = () => {
         return true;
     };
 
-    return {placeShip, receiveAttack, allShipSunk}
+    return { placeShip, receiveAttack, allShipSunk };
 };
 
-export {Gameboard}
+export { Gameboard };
