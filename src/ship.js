@@ -32,7 +32,7 @@ const Ship = (posArr) => {
 
     const getPos = () => positionArr;
 
-    return { isHit, isSunk, getPos };
+    return { isHit, isSunk, getPos, positionArr };
 };
 
 export { Ship };

@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "player1 player2";
+}
+
+.player2 {
+    grid-area: player2;
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: 1fr 400px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". box ."
+        ". . .";
+}
+
+.player1 {
+    grid-area: player1;
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: 1fr 400px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". box ."
+        ". . .";
+}
+
+.grids {
+    border: 1px solid white;
+}
+
+.grid-container {
+    background-color: #00bfff;
+    grid-area: box;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+#1-player {
+    color:#595959 ;
+}
