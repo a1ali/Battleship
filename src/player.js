@@ -9,8 +9,6 @@ const Player = (ai) => {
         board.placeShip(board.generateBattleship(), ai);
         board.placeShip(board.generateDestroyer(), ai);
         board.placeShip(board.generateSubmarine(), ai);
-        board.placeShip(board.generateSubmarine(), ai);
-        board.placeShip(board.generatePatrolBoat(), ai);
         board.placeShip(board.generatePatrolBoat(), ai);
     };
 
