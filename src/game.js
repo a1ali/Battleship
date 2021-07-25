@@ -17,8 +17,10 @@ const game = () => {
 
     const playGame = (position) => {
         console.log(position)
-        player.humanMove(position, computer)
-        computer.computerMove(player)
+        if (player.humanMove(position, computer)) {
+            computer.computerMove(player)
+        }
+        // computer.computerMove(player)
         
     }
 

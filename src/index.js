@@ -17,10 +17,17 @@ let newGame = game();
 let computerBoard = document.getElementById(`computer-grid`);
 
 computerBoard.addEventListener("click", (e) => {
-    let posId = e.target.id;
-    //console.log(posId);
-    let posNum = getCellNum(posId)
-    newGame.playGame(posNum);
+    //console.log(e.target.id)
+    if (e.target.id !== 'computer-grid') {
+        let posId = e.target.id;
+        //console.log(posId);
+        let posNum = getCellNum(posId)
+        newGame.playGame(posNum);  
+    }
+    // let posId = e.target.id;
+    // //console.log(posId);
+    // let posNum = getCellNum(posId)
+    // newGame.playGame(posNum);
     // player.humanMove(getCellNum(posId), computer);
 
 });
