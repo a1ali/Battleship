@@ -13,7 +13,8 @@
 
 .container {
     height: 75vh;
-    display: grid;
+    /* display: grid; */
+    display: none;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
@@ -56,4 +57,82 @@
 
 #1-player {
     color:#595959 ;
+}
+
+/* game start screen styles */
+.game-start-container {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player1-start {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: 1fr 400px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". box ."
+        ". . .";
+}
+
+.ship-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+
+}
+
+.carrier-container{
+    background-color: #595959;
+    display: flex;
+    margin-bottom: 15px;
+    max-width: calc(45px * 5);
+}
+
+.cell {
+    border: 1px solid white;
+    background-color: #595959;
+    height: 40px;
+    width: 45px;
+}
+
+.battleship-container{
+    display: flex;
+    margin-bottom: 15px;
+    max-width: calc(45px * 4);
+
+}
+
+.destroyer-container {
+    display: flex;
+    margin-bottom: 15px;
+    max-width: calc(45px * 3);
+}
+
+.sub-container{
+    display: flex; 
+    margin-bottom: 15px;
+    max-width: calc(45px * 3);
+}
+
+.patrol-container  {
+    display: flex; 
+    margin-bottom: 15px;
+    max-width: calc(45px * 2);
+}
+
+.hold {
+    border: solid #ccc 2px;
+}
+
+.invisible {
+    display: none;
+}
+
+.hovered {
+    background: #f4f4f4;
+    border-style: dashed;
 }
