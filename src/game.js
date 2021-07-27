@@ -15,7 +15,8 @@ const game = () => {
     let computer = Player(true);
     //start board 
     createStartBoard(createBoard(player));
-    setTimeout(() => createEventListeners(), 0);
+    // setTimeout(() => createEventListeners(), 0);
+    createEventListeners();
     // playerStartBoard.appendChild(createBoard(player));
 
     //game board

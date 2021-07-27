@@ -2,13 +2,13 @@ const Ship = (posArr) => {
     //position array wil contain div number where the ship is located
     let positionArr = posArr;
 
-    const removeItemFromArr = (arr, item) => {
-        let index = arr.indexOf(item);
-        if (index > -1) {
-            arr.splice(index, 1);
-        }
-        return arr;
-    };
+    // const removeItemFromArr = (arr, item) => {
+    //     let index = arr.indexOf(item);
+    //     if (index > -1) {
+    //         arr.splice(index, 1);
+    //     }
+    //     return arr;
+    // };
 
     const isHit = (pos) => {
         if (positionArr.includes(pos)) {
@@ -35,4 +35,12 @@ const Ship = (posArr) => {
     return { isHit, isSunk, getPos, positionArr };
 };
 
-export { Ship };
+const removeItemFromArr = (arr, item) => {
+    let index = arr.indexOf(item);
+    if (index > -1) {
+        arr.splice(index, 1);
+    }
+    return arr;
+};
+
+export { Ship, removeItemFromArr };
