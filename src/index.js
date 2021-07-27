@@ -16,6 +16,7 @@ import {game} from "./game"
 let newGame = game();
 let computerBoard = document.getElementById(`computer-grid`);
 
+
 computerBoard.addEventListener("click", (e) => {
     //console.log(e.target.id)
     if (e.target.id !== 'computer-grid') {

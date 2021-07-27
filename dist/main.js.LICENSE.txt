@@ -1,0 +1,1 @@
+//!ai allows for only the player board to have colored ships

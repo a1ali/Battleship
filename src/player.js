@@ -12,6 +12,11 @@ const Player = (ai) => {
         board.placeShip(board.generatePatrolBoat(), ai);
     };
 
+    const deployFleet = (arr) => {
+        //console.log(arr);
+        board.placeShip(arr, false);
+    }
+
     if (ai) {
         createShipsForComputer();
     }
@@ -66,6 +71,7 @@ const Player = (ai) => {
         attacks,
         board,
         createShipsForComputer,
+        deployFleet
     };
 };
 

@@ -8,10 +8,11 @@ const Gameboard = () => {
     let occupiedPlaces = [];
 
     const placeShip = (shipPosArr, ai) => {
-        let newShip = Ship(shipPosArr);
+        let gameShips = shipPosArr;
+        let newShip = Ship(gameShips);
         ships.push(newShip);
-        putShipOnBoard(shipPosArr, ai);
-        shipPosArr.forEach((element) => {
+        putShipOnBoard(gameShips, ai);
+        gameShips.forEach((element) => {
             occupiedPlaces.push(element);
         });
     };

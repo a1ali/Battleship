@@ -1,10 +1,15 @@
-const createBoard = (player) => {
+const createBoard = (player, start = 0) => {
     let container = document.createElement("div");
     let numOfCols = 10;
     for (let i = 1; i <= numOfCols * numOfCols; i++) {
         let div = document.createElement("div");
         div.innerText = "";
         div.id = `${i}-${player.name}`;
+
+        //if it is the start board mark the id with start
+        if (start == 1) {
+            div.id = `${i}-${player.name}-start`;
+        }
         div.className = "grids";
         container.appendChild(div);
     }
@@ -35,6 +40,8 @@ const getCellNum = (id) => {
 };
 
 const putShipOnBoard = (posArr, ai) => {
+    //!ai allows for only the player board to have colored ships
+    //computer ships are not colored and hidden
     if (!ai) {
         posArr.forEach((pos) => {
             let cell = document.getElementById(`${pos}-player`);
