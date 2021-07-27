@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
@@ -60,8 +63,43 @@
 }
 
 /* game start screen styles */
+.gameStartScreen {
+    display: flex;
+    flex-direction: column;
+}
+
+.startMsg {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play {
+    padding: 0px 20px;
+}
+.play button {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+}
+
+.reset button {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+}
+
+
 .game-start-container {
-    height: 75vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,14 +120,17 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
-    width: calc(45px * 5);
+    width: calc(45px * 5 + 40px);
+    height: calc(45px * 5 + 70px);
+    border: 2px solid black;
+    
 
 }
 
 .carrier-container{
     background-color: #595959;
     display: flex;
-    margin-bottom: 15px;
+    margin: 5px;
     max-width: calc(45px * 5);
 }
 
@@ -102,26 +143,26 @@
 
 .battleship-container{
     display: flex;
-    margin-bottom: 15px;
+    margin: 5px;
     max-width: calc(45px * 4);
 
 }
 
 .destroyer-container {
     display: flex;
-    margin-bottom: 15px;
+    margin: 5px;
     max-width: calc(45px * 3);
 }
 
 .sub-container{
     display: flex; 
-    margin-bottom: 15px;
+    margin: 5px;
     max-width: calc(45px * 3);
 }
 
 .patrol-container  {
     display: flex; 
-    margin-bottom: 15px;
+    margin: 5px;
     max-width: calc(45px * 2);
 }
 
