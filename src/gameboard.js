@@ -1,5 +1,6 @@
 import { Ship } from "./ship";
 import { cellHit, cellMiss, putShipOnBoard } from "./createBoard";
+import { msg, clearMsg } from "./type";
 
 const Gameboard = () => {
     let ships = [];
@@ -31,12 +32,20 @@ const Gameboard = () => {
                     hit = true;
                     placesHit.push(position);
                     cellHit(position, player);
+                    if (player.name === 'computer') {
+                        clearMsg();
+                        msg("It's a hit!")
+                    }
                     break;
                 }
             }
             if (!hit) {
                 missedAttackArr.push(position);
                 cellMiss(position, player);
+                if (player.name === 'computer') {
+                    clearMsg();
+                    msg("You missed.")
+                }
                 //mark div as miss
             }
             return true;

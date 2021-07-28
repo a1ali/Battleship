@@ -1,4 +1,5 @@
 import { removeItemFromArr } from "./ship";
+import { msg, clearMsg } from "./type";
 
 const gameStart = () => {
     const playerStartBoard = document.querySelector(".player1-start");
@@ -183,7 +184,9 @@ const gameStart = () => {
         currShipIndex = [];
         //console.log(cellsWithShip);
         if(allShipsplaced()) {
-            console.log('hello all are placed')
+            // console.log('hello all are placed')
+            clearMsg();
+            msg('Press play to attack the enemy.');
         }
         if (placed) {
             return true;

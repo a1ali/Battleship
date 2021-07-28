@@ -1,4 +1,5 @@
 import { Gameboard } from "./gameboard";
+import { msg, clearMsg} from "./type";
 
 const Player = (ai) => {
     let attacks = [];
@@ -27,7 +28,8 @@ const Player = (ai) => {
             enemy.board.receiveAttack(attackPosition, enemy);
             enemy.attacks.push(attackPosition);
             if (enemy.board.allShipSunk()) {
-                console.log("game over Computer Wins");
+                clearMsg();
+                msg('Defeat! The enemy has destroyed our fleet!')
             }
         }
     };
@@ -47,7 +49,9 @@ const Player = (ai) => {
                 // enemy.board.receiveAttack(pos, enemy);
                 
                 if (enemy.board.allShipSunk()) {
-                    console.log("game over player wins");
+                    //console.log("game over player wins");
+                    clearMsg();
+                    msg('Victory! The enemy has been defeated.')
                 }
                 return true;
             }
