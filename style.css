@@ -1,8 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
 
+/* body {
+    background-color: black;
+} */
+
 body {
     background-color: black;
-}
+    background-image: radial-gradient(
+      rgba(63, 62, 62, 0.75), rgb(0, 0, 0) 120%
+    );
+    height: 100vh;
+    color: white;
+    /* font: 1.3rem Inconsolata, monospace; */
+    text-shadow: 0 0 3px #C8C8C8;
+
+  }
+
+  /* body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  } */
+
+
 * {
     padding: 0;
     margin: 0;
@@ -71,38 +101,85 @@ body {
 }
 
 .startMsg {
-    color: whitesmoke;
-    font-family: 'Roboto';
+    color: #00fa00;
+    /* color: white; */
+    font-family: monospace;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .play {
-    padding: 0px 20px;
+    padding: 0px 50px;
+
+
 }
 .play button {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    border: none;
     cursor: pointer;
-    width: 50px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: green;
+    box-shadow: 0 8px 0 rgb(15, 92, 0), 
+    0 15px 20px rgba(0,0,0,.35);
+    text-shadow: 0 3px 1px rgba(20, 70, 1, 0.8);
+    text-transform: uppercase;
+    transition: .1s all ease-in;
+    outline: none; 
+    cursor: pointer;
 }
 
 .reset button {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    border: none;
     cursor: pointer;
-    width: 50px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    text-shadow: 0 3px 1px rgba(122,17,8,.8);
+    box-shadow: 0 8px 0 rgb(183,9,0), 
+    0 15px 20px rgba(0,0,0,.35);
+    text-transform: uppercase;
+    transition: .1s all ease-in;
+    outline: none; 
+    cursor: pointer;
+}
+
+.reset button:active {
+    padding-top: 3px;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgb(183,0,0),
+      0 8px 6px rgba(0,0,0,.45);
+}
+
+.play button:active {
+    padding-top: 3px;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgb(10, 88, 0),
+      0 8px 6px rgba(0,0,0,.45);
 }
 
 
+
 .game-start-container {
-    height: 70vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
