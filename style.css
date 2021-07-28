@@ -298,11 +298,17 @@ body {
     #player-grid {
         position: relative;
         left: 50%;
-        bottom: 10%;
+        bottom: 2%;
     }
     #computer-grid {
         position: relative;
         right: 50%;
-        bottom: 10%;
+        bottom: 2%;
+    }
+
+    #restart {
+        width: 150px;
+        height: 150px;
+        font-size: 1.5em;
     }
 }
