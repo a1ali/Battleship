@@ -4,6 +4,7 @@ import { msg, clearMsg } from "./type";
 const Player = (ai) => {
     let attacks = [];
     let board = Gameboard();
+    let win = false;
 
     const createShipsForComputer = () => {
         board.placeShip(board.generateCarrier(), ai);
@@ -22,7 +23,7 @@ const Player = (ai) => {
     }
 
     const computerMove = (enemy) => {
-        if (ai) {
+        if (ai && !enemy.board.allShipSunk() && !board.allShipSunk()) {
             let attackPosition = getRandomLoc(enemy);
             enemy.board.receiveAttack(attackPosition, enemy);
             enemy.attacks.push(attackPosition);
@@ -42,7 +43,7 @@ const Player = (ai) => {
     };
 
     const humanMove = (pos, enemy) => {
-        if (!ai) {
+        if (!ai && !enemy.board.allShipSunk() && !board.allShipSunk()) {
             if (
                 !enemy.attacks.includes(pos) &&
                 enemy.board.receiveAttack(pos, enemy)
