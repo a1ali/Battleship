@@ -115,6 +115,7 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+    padding-bottom: 20px;
 }
 
 .play {
@@ -126,11 +127,11 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.1em;
     border: none;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: green;
     box-shadow: 0 8px 0 rgb(15, 92, 0), 
@@ -146,11 +147,11 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.05em;
     border: none;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: red;
     text-shadow: 0 3px 1px rgba(122,17,8,.8);
