@@ -1,5 +1,5 @@
 import { Gameboard } from "./gameboard";
-import { msg, clearMsg} from "./type";
+import { msg, clearMsg } from "./type";
 
 const Player = (ai) => {
     let attacks = [];
@@ -14,9 +14,8 @@ const Player = (ai) => {
     };
 
     const deployFleet = (arr) => {
-        //console.log(arr);
         board.placeShip(arr, false);
-    }
+    };
 
     if (ai) {
         createShipsForComputer();
@@ -29,7 +28,7 @@ const Player = (ai) => {
             enemy.attacks.push(attackPosition);
             if (enemy.board.allShipSunk()) {
                 clearMsg();
-                msg('Defeat! The enemy has destroyed our fleet!')
+                msg("Defeat! The enemy has destroyed our fleet!");
             }
         }
     };
@@ -44,14 +43,15 @@ const Player = (ai) => {
 
     const humanMove = (pos, enemy) => {
         if (!ai) {
-            if (!enemy.attacks.includes(pos) && enemy.board.receiveAttack(pos, enemy)) {
+            if (
+                !enemy.attacks.includes(pos) &&
+                enemy.board.receiveAttack(pos, enemy)
+            ) {
                 enemy.attacks.push(pos);
-                // enemy.board.receiveAttack(pos, enemy);
-                
+
                 if (enemy.board.allShipSunk()) {
-                    //console.log("game over player wins");
                     clearMsg();
-                    msg('Victory! The enemy has been defeated.')
+                    msg("Victory! The enemy has been defeated.");
                 }
                 return true;
             }
@@ -75,7 +75,7 @@ const Player = (ai) => {
         attacks,
         board,
         createShipsForComputer,
-        deployFleet
+        deployFleet,
     };
 };
 

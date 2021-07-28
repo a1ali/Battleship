@@ -43,7 +43,7 @@ const getCellNum = (id) => {
 };
 
 const putShipOnBoard = (posArr, ai) => {
-    //!ai allows for only the player board to have colored ships
+    //(!ai) allows for only the player board to have colored ships
     //computer ships are not colored and hidden
     if (!ai) {
         posArr.forEach((pos) => {
@@ -52,4 +52,5 @@ const putShipOnBoard = (posArr, ai) => {
         });
     }
 };
+
 export { createBoard, cellHit, cellMiss, getCellNum, putShipOnBoard };
