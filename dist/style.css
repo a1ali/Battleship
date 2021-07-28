@@ -180,6 +180,7 @@ body {
 
 
 
+
 .game-start-container {
     height: 65vh;
     display: flex;
@@ -259,4 +260,48 @@ body {
 .hovered {
     background: #f4f4f4;
     border-style: dashed;
+}
+
+
+@media only screen and (min-width: 1900px) and (max-width:2500px) {
+    .play button {
+        width: 100px;
+        height: 100px;
+        font-size: 1.3em;
+    }
+    .reset button {
+        width: 100px;
+        height: 100px;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width:2500px) {
+    .play button {
+        width: 150px;
+        height: 150px;
+        font-size: 1.9em;
+    }
+    .reset button {
+        width: 150px;
+        height: 150px;
+        font-size: 1.8em;
+    }
+
+    .startMsg {
+        position: relative;
+        top: 60px;
+        font-size: 2.3em;
+    }
+
+    #player-grid{
+        position: relative;
+        left: 50%;
+        bottom: 10%;
+    }
+    #computer-grid{
+        position: relative;
+        right: 50%;
+        bottom: 10%;
+    }
 }

@@ -22,6 +22,9 @@ const createBoard = (player, start = 0) => {
     container.style["grid-template-columns"] = autos;
     container.style.display = "grid";
     container.id = `${player.name}-grid`;
+    if (start === 1) {
+        container.id = `${player.name}-grid-start`;
+    }
     return container;
 };
 
